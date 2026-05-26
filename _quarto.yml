@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "OnlyBlends.Mixer.Docs"
+  title: "OnlyBlends.Mixer"
   navbar:
     left:
       - index.qmd
-      
-
+    right: 
+      - href: https://discord.gg/rxut2MfZTM
+        text: "![](images/icons/discord-logo-8233-light.svg){height=1.6em}"
 format:
   html:
     respect-user-color-scheme: true

@@ -1,10 +1,50 @@
-title: "Onlyblends.Mixer.Docs"
+---
+title: "Docs"
 format: html
 toc: true
 toc-depth: 3
 toc-location: left
 number-sections: true
 ---
+# Features
+
+- Create samples from an 'Oscillator' node with basic waveforms: Sine, Sawtooth, Square and Triangle
+- Edit a sample with a lot of functions:
+  - 'Limit' to control the length 
+  - 'Fade in / out'
+  - 'Mix' and 'Modulate' to combine 2 waveforms into a new one
+  - 'Volume'
+  - ... and many more
+  - The functions are mapped from the internal aud libary documented [here](https://docs.blender.org/api/current/aud.html)
+
+
+![edit_sample](https://github.com/user-attachments/assets/bbf8efb9-b75d-41f2-a23d-bbaa0503e85e)
+
+- The 'Sample to Sound' Node creates a blender Sound Data block which can be used with Blender's Speaker Object
+- Sound's can be linked with the 'Speaker Link' Node or you can select it in the already existing Speaker Property Panel
+- The Speaker Link Node adjusts the Strip length based on the sample / sound length
+
+## Geometry Node Link
+
+- The 'Geometry Modifier Object' Node can manipulate the Input of an Geometry Nodes Modifier
+- You can send Data from Mixer Nodes to Geometry Nodes. As an example: To adjust a waves frequency
+  
+![GeometryModifierObject](https://github.com/user-attachments/assets/830d2b7a-520c-4863-8a00-99bdc1de1272)
+- The 'Object to Sample' Node gets Data from Geometry / Objects an creates a Sound Sample
+- You could use Blender Objects to play/create sounds
+
+![Object_to_Sample](https://github.com/user-attachments/assets/83ba9d88-8158-4f50-ad3f-58aa7ed1b55b)
+## MIDI Import
+
+- New experimental Feature "Import MIDI" Node
+- "MIDI to Track Object" Node to get Note_On, Note_Off events from MIDI files, (more events coming soon)
+- The resulting Object from the "MIDI to Track Object" can be converted to "Sample" with "Track Sample" Node
+- You can observe the Object from "MIDI to Track Object" to see how a Note Sequence are processed from "Track Sample" Node
+- It is possible to create the Notes via Geometry Nodes and MIDI is merely an additonal Feature
+- The Data needed for a "Track Sample" node should have the following attributes: Position.X -> Start_Time, Position.Y -> Duration, Position.Z -> Frequency and Volume
+
+![Midi_data](https://github.com/user-attachments/assets/f3c59045-f382-40e0-ab8a-42131c37b530)
+
 # Changelog
 ## v0.1.2 Hotfix
   - [x] Fixed copy function of Nodes, where "CTRL+V" of nodes caused Blender to crash
