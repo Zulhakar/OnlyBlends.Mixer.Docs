@@ -2,15 +2,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "OnlyBlends.Mixer.Docs",
+    "title": "Docs",
     "section": "",
-    "text": "title: “Onlyblends.Mixer.Docs” format: html toc: true toc-depth: 3 toc-location: left number-sections: true — # Changelog ## v0.1.2 Hotfix - [x] Fixed copy function of Nodes, where “CTRL+V” of nodes caused Blender to crash ## v0.1.3 Hotfix - [x] Loading a .blend file containing Mixer nodes should now work better - [x] Oscillator Nodes and ‘Geometry to Sample’ Nodes update the Node tree after loading the .blend file. - [X] General fix for ‘Geometry to Sample’ Node"
+    "text": "Create samples from an ‘Oscillator’ node with basic waveforms: Sine, Sawtooth, Square and Triangle\nEdit a sample with a lot of functions:\n\n‘Limit’ to control the length\n‘Fade in / out’\n‘Mix’ and ‘Modulate’ to combine 2 waveforms into a new one\n‘Volume’\n… and many more\nThe functions are mapped from the internal aud libary documented here\n\n\n\n\n\nedit_sample\n\n\n\nThe ‘Sample to Sound’ Node creates a blender Sound Data block which can be used with Blender’s Speaker Object\nSound’s can be linked with the ‘Speaker Link’ Node or you can select it in the already existing Speaker Property Panel\nThe Speaker Link Node adjusts the Strip length based on the sample / sound length\n\n\n\n\nThe ‘Geometry Modifier Object’ Node can manipulate the Input of an Geometry Nodes Modifier\nYou can send Data from Mixer Nodes to Geometry Nodes. As an example: To adjust a waves frequency\n\n - The ‘Object to Sample’ Node gets Data from Geometry / Objects an creates a Sound Sample - You could use Blender Objects to play/create sounds\n ## MIDI Import\n\nNew experimental Feature “Import MIDI” Node\n“MIDI to Track Object” Node to get Note_On, Note_Off events from MIDI files, (more events coming soon)\nThe resulting Object from the “MIDI to Track Object” can be converted to “Sample” with “Track Sample” Node\nYou can observe the Object from “MIDI to Track Object” to see how a Note Sequence are processed from “Track Sample” Node\nIt is possible to create the Notes via Geometry Nodes and MIDI is merely an additonal Feature\nThe Data needed for a “Track Sample” node should have the following attributes: Position.X -&gt; Start_Time, Position.Y -&gt; Duration, Position.Z -&gt; Frequency and Volume\n\n\n\n\nMidi_data"
+  },
+  {
+    "objectID": "index.html#geometry-node-link",
+    "href": "index.html#geometry-node-link",
+    "title": "Docs",
+    "section": "",
+    "text": "The ‘Geometry Modifier Object’ Node can manipulate the Input of an Geometry Nodes Modifier\nYou can send Data from Mixer Nodes to Geometry Nodes. As an example: To adjust a waves frequency\n\n - The ‘Object to Sample’ Node gets Data from Geometry / Objects an creates a Sound Sample - You could use Blender Objects to play/create sounds\n ## MIDI Import\n\nNew experimental Feature “Import MIDI” Node\n“MIDI to Track Object” Node to get Note_On, Note_Off events from MIDI files, (more events coming soon)\nThe resulting Object from the “MIDI to Track Object” can be converted to “Sample” with “Track Sample” Node\nYou can observe the Object from “MIDI to Track Object” to see how a Note Sequence are processed from “Track Sample” Node\nIt is possible to create the Notes via Geometry Nodes and MIDI is merely an additonal Feature\nThe Data needed for a “Track Sample” node should have the following attributes: Position.X -&gt; Start_Time, Position.Y -&gt; Duration, Position.Z -&gt; Frequency and Volume\n\n\n\n\nMidi_data"
+  },
+  {
+    "objectID": "index.html#v0.1.2-hotfix",
+    "href": "index.html#v0.1.2-hotfix",
+    "title": "Docs",
+    "section": "2.1 v0.1.2 Hotfix",
+    "text": "2.1 v0.1.2 Hotfix\n\nFixed copy function of Nodes, where “CTRL+V” of nodes caused Blender to crash ## v0.1.3 Hotfix\nLoading a .blend file containing Mixer nodes should now work better\nOscillator Nodes and ‘Geometry to Sample’ Nodes update the Node tree after loading the .blend file.\nGeneral fix for ‘Geometry to Sample’ Node"
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "OnlyBlends.Mixer.Docs",
-    "section": "0.5.1",
-    "text": "0.5.1\n\nComplete Refactor\nThe basic Node functions moved to OnlyBlends.Core https://github.com/Zulhakar/OnlyBlendsCore\nMIDI Import\nMIDI to Track\nTrack Sample\nImport Sound Node\nSound To Sample Node\nRemoved “Instrument Node” -&gt; Use “Track Sample” Node\nConnection to Geometry Nodes via “Geometry Modifier Object” and “Object To Sample”"
+    "title": "Docs",
+    "section": "2.2 0.5.1",
+    "text": "2.2 0.5.1\n\nComplete Refactor\nThe basic Node functions moved to OnlyBlends.Core https://github.com/Zulhakar/OnlyBlendsCore\nMIDI Import\nMIDI to Track\nTrack Sample\nImport Sound Node\nSound To Sample Node\nRemoved “Instrument Node” -&gt; Use “Track Sample” Node\nConnection to Geometry Nodes via “Geometry Modifier Object” and “Object To Sample”"
   }
 ]
